@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #3d6856de;
+    box-shadow: 0 10px 15px #313d38de;
+}
+
+.link {
+    padding: 5px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #e7faf2de;
+}
+.link:hover {
+    color: #8bb1a0de;
+}
+
+.active {
+    border: 1px solid #707070de;
+    border-radius: 5px;
+    background-color: #455f54de;
+    color: #e7faf2de;
+}

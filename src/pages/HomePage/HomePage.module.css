@@ -1,0 +1,30 @@
+.loader {
+    font-size: 1.5rem;
+    color: #006400;
+    animation: pulse 1s infinite;
+    margin-top: 50px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.error {
+    font-size: 1.5rem;
+    color: #ff0000;
+    background-color: #ffecec;
+    padding: 15px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    margin-top: 50px;
+}

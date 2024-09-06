@@ -1,0 +1,22 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #e7faf2de;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #3d6856de;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
