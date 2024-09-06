@@ -1,0 +1,6 @@
+{
+  "rewrites": [{ "source": "/movies/:path*", "destination": "/movies" }],
+  "redirects": [
+    { "source": "/old-path", "destination": "/new-path", "permanent": true }
+  ]
+}
