@@ -30,6 +30,8 @@ export default function MovieCast({ movieId }) {
         return <div className={css.error}>{error}</div>; 
     }
 
+    const defaultImg = 'https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg';
+
     return (
         <ul className={css.castList}>
             {cast.length > 0 ? (
@@ -42,7 +44,12 @@ export default function MovieCast({ movieId }) {
                                 alt={actor.name}
                             />
                         ) : (
-                            <div className={css.placeholder}>No Image</div> 
+                            <img 
+                                className={css.photo} 
+                                src={defaultImg} 
+                                alt="Default actor image" 
+                                width={250}
+                            />
                         )}
                         <p className={css.role}>{actor.name} as {actor.character}</p>
                     </li>
