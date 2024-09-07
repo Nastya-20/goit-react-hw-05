@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link, Routes, Route, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from 'react';
+import { useParams, Link, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { getMovieDetails } from '../../movies-api';
 import MovieCast from '../../components/MovieCast/MovieCast';
 import MovieReviews from '../../components/MovieReviews/MovieReviews';
@@ -8,16 +8,36 @@ import css from '../MovieDetailsPage/MovieDetailsPage.module.css';
 export default function MovieDetailsPage() {
     const { movieId } = useParams();
     const [movie, setMovie] = useState(null);
+    const [error, setError] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+    const backLinkLocationRef = useRef(location.state?.from || '/movies');
 
     useEffect(() => {
-        getMovieDetails(movieId).then(setMovie);
+        const fetchMovieDetails = async () => {
+            setIsLoading(true);
+            setError(null);
+
+            try {
+                const movieData = await getMovieDetails(movieId);
+                setMovie(movieData);
+            } catch (err) {
+                setError('Failed to load movie details.');
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchMovieDetails();
     }, [movieId]);
 
     const handleGoBack = () => {
-        navigate(-1);
+        navigate(backLinkLocationRef.current); 
     };
 
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div className={css.error}>{error}</div>;
     if (!movie) return null;
 
     const genres = movie.genres.map(genre => genre.name).join(', ');
@@ -55,4 +75,5 @@ export default function MovieDetailsPage() {
         </div>
     );
 }
+
 

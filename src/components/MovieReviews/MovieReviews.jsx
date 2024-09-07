@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getMovieReviews } from '../../movies-api';
 import css from '../MovieReviews/MovieReviews.module.css';
 
-export default function MovieReviews({ movieId }) {
+export default function MovieReviews() {
+    const { movieId } = useParams();  
     const [reviews, setReviews] = useState([]);
     const [error, setError] = useState(null);
 
@@ -37,4 +39,5 @@ export default function MovieReviews({ movieId }) {
         </div>
     );
 }
+
 

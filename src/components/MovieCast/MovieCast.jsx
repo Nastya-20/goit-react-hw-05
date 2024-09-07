@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getMovieCast } from '../../movies-api';
 import css from './MovieCast.module.css'; 
 
-export default function MovieCast({ movieId }) {
+export default function MovieCast() {
+    const { movieId } = useParams();  
     const [cast, setCast] = useState([]);
     const [isLoading, setIsLoading] = useState(true); 
     const [error, setError] = useState(null); 
@@ -60,3 +62,4 @@ export default function MovieCast({ movieId }) {
         </ul>
     );
 }
+

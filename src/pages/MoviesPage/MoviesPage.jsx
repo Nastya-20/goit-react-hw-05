@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { searchMovies } from '../../movies-api';
 import MovieList from '../../components/MovieList/MovieList';
 import css from '../MoviesPage/MoviesPage.module.css';
 
 export default function MoviesPage() {
     const [movies, setMovies] = useState([]);
-    const [query, setQuery] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [warning, setWarning] = useState('');
+    const [searchParams, setSearchParams] = useSearchParams();
+    
+    const query = searchParams.get('query') || '';
 
     useEffect(() => {
         const savedMovies = localStorage.getItem('movies');
@@ -17,17 +20,20 @@ export default function MoviesPage() {
         }
     }, []);
 
-
     useEffect(() => {
         if (movies.length > 0) {
             localStorage.setItem('movies', JSON.stringify(movies));
         }
     }, [movies]);
 
-    const handleSearch = async (e) => {
-        e.preventDefault();
+    useEffect(() => {
+        if (query) {
+            handleSearch(query);
+        }
+    }, [query]);
 
-        if (query.trim() === '') {
+    const handleSearch = async (searchQuery) => {
+        if (searchQuery.trim() === '') {
             setWarning('Please enter a search term.');
             setMovies([]);
             return;
@@ -38,7 +44,7 @@ export default function MoviesPage() {
         setWarning('');
 
         try {
-            const results = await searchMovies(query);
+            const results = await searchMovies(searchQuery);
 
             if (results.length === 0) {
                 setWarning('No movies found for your search.');
@@ -53,7 +59,8 @@ export default function MoviesPage() {
     };
 
     const handleInputChange = (e) => {
-        setQuery(e.target.value);
+        const value = e.target.value;
+        setSearchParams({ query: value }); 
 
         if (warning || error) {
             setWarning('');
@@ -61,9 +68,16 @@ export default function MoviesPage() {
         }
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (query) {
+            handleSearch(query);
+        }
+    };
+
     return (
         <div>
-            <form onSubmit={handleSearch}>
+            <form onSubmit={handleSubmit}>
                 <input
                     className={css.input}
                     type="text"
@@ -82,6 +96,7 @@ export default function MoviesPage() {
         </div>
     );
 }
+
 
 
 
