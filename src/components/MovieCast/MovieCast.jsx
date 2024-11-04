@@ -32,7 +32,7 @@ export default function MovieCast() {
         return <div className={css.error}>{error}</div>; 
     }
 
-    const defaultImg = 'https://Nastya-20.github.io/goit-react-hw-05/src/img/dog-2367414_640.jpg';
+    const defaultImg = 'https://Nastya-20.github.io/goit-react-hw-05/img/dog-2367414_640.jpg';
 
     return (
         <ul className={css.castList}>
