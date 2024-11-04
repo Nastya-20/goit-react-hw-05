@@ -19,6 +19,13 @@
     }
 }
 
+.title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 20px 0;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
 .error {
     font-size: 1.5rem;
     color: #ff0000;

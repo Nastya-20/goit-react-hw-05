@@ -33,6 +33,7 @@ h3 {
     letter-spacing: 0.04em;
 }
 .wrapper {
+    background-color: rgb(34, 49, 63, 0.8);
     margin-top: 10px;
     padding: 5px 35px;
     display: flex;
@@ -40,6 +41,7 @@ h3 {
     justify-content:flex-start;
     gap: 20px;
     font-size: 20px;
+    border-radius: 8px;
     border-bottom: 1px solid #3d6856de;
     box-shadow: 0 10px 15px #313d38de;
 }

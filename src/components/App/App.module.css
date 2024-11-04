@@ -1,0 +1,25 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   margin-bottom: 10px;
+}
+
+.languageSwitcher {
+     text-align: right;
+     margin: 0;
+}
+
+.languageSwitcher button {
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #5f6160;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.languageSwitcher button:hover {
+    background-color: #697571;
+}

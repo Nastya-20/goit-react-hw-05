@@ -1,4 +1,46 @@
-.wrapList {
-    border-top: 1px solid #34423cde;
-    padding-top: 15px;
+.wrap{
+    min-height: 600px;
+}
+
+.poster {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+:root {
+    --swiper-navigation-size: 48px;
+    --swiper-theme-color: #fafafa;
+    --swiper-navigation-top-offset: 500px;
+}
+
+.link{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+}
+.link:hover {
+    transform: scale(1.07);
+}
+
+.link img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.link span {
+  margin: 20px;
+  color: #cff1d7;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgba(221, 255, 252, 0);
 }
