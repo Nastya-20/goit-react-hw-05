@@ -3,6 +3,7 @@ import { useParams, Link, Routes, Route, useNavigate, useLocation } from 'react-
 import { getMovieDetails } from '../../movies-api';
 import MovieCast from '../../components/MovieCast/MovieCast';
 import MovieReviews from '../../components/MovieReviews/MovieReviews';
+import { useTranslation } from 'react-i18next';
 import css from '../MovieDetailsPage/MovieDetailsPage.module.css';
 
 export default function MovieDetailsPage() {
@@ -13,6 +14,7 @@ export default function MovieDetailsPage() {
     const navigate = useNavigate();
     const location = useLocation();
     const backLinkLocationRef = useRef(location.state?.from || '/movies');
+     const { t } = useTranslation();
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
@@ -45,7 +47,7 @@ export default function MovieDetailsPage() {
 
     return (
         <div>
-           <button className={css.back} onClick={handleGoBack}>Go back</button>
+           <button className={css.back} onClick={handleGoBack}>{t('go_back')}</button>
             <div className={css.container}>
               <img className={css.poster}
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -55,17 +57,17 @@ export default function MovieDetailsPage() {
                 <h1 className={css.title}>{movie.title}</h1>
                 <p className={css.overview}>{movie.overview}</p>
                 <ul className={css.details}>
-                    <li><strong>Release Date:</strong> {movie.release_date}</li>
-                    <li><strong>Country:</strong> {countries}</li>
-                    <li><strong>Genre:</strong> {genres}</li>
-                    <li><strong>User Score:</strong> {movie.vote_average.toFixed(1)}</li>
+                    <li><strong>{t('release_date')}</strong> {movie.release_date}</li>
+                    <li><strong>{t('country')}</strong> {countries}</li>
+                    <li><strong>{t('genre')}</strong> {genres}</li>
+                    <li><strong>{t('user_score')}</strong> {movie.vote_average.toFixed(1)}</li>
                 </ul>
                 </div>
             </div>
-            <h3>Additional information:</h3>
+            <h3>{t('additional_information')}</h3>
             <nav className={css.wrapper}>
-                <Link to="cast">Cast</Link>
-                <Link to="reviews">Reviews</Link>
+                <Link to="cast">{t('cast')}</Link>
+                <Link to="reviews">{t('reviews')}</Link>
             </nav>
 
             <Routes>

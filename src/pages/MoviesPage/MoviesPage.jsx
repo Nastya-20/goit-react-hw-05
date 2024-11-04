@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { searchMovies } from '../../movies-api';
 import MovieList from '../../components/MovieList/MovieList';
+import { useTranslation } from 'react-i18next';
 import css from '../MoviesPage/MoviesPage.module.css';
 
 export default function MoviesPage() {
@@ -10,6 +11,8 @@ export default function MoviesPage() {
     const [error, setError] = useState(null);
     const [warning, setWarning] = useState('');
     const [searchParams, setSearchParams] = useSearchParams();
+
+    const { t } = useTranslation();
     
     const query = searchParams.get('query') || '';
 
@@ -83,10 +86,10 @@ export default function MoviesPage() {
                     type="text"
                     value={query}
                     onChange={handleInputChange}
-                    placeholder="Search for movies..."
+                    placeholder={t('search_for_movies')}
                 />
                 <button className={css.btn} type="submit">
-                    {isLoading ? 'Searching...' : 'Search'}
+                    {isLoading ? 'Searching...' : t('Search')}
                 </button>
             </form>
             {warning && <div className={css.warning}>{warning}</div>}

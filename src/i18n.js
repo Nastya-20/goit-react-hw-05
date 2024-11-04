@@ -1,4 +1,3 @@
-// src/i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -8,11 +7,12 @@ i18n
     resources: {
       ua: {
         translation: {
-          "welcome": "Ласкаво просимо",
+          "welcome": "Ласкаво просимо!",
           "hello": "Привіт",
           "home": "Головна",
           "movies": "Фільми",
-          "search": "Пошук",
+          "Search": "Пошук",
+          "search_for_movies": "Пошук фільмів...",
           "add_to_favorites": "Додати до обраного",
           "remove_from_favorites": "Видалити з обраного",
           "submit": "Відправити",
@@ -23,9 +23,13 @@ i18n
           "movie_details": "Деталі фільму",
           "cast": "Актори",
           "reviews": "Відгуки",
-          "release_date": "Дата виходу",
-          "rating": "Рейтинг",
+          "release_date": "Дата виходу:",
+          "country": "Країна:",
+          "genre": "Жанр:",
+          "user_score": "Рейтинг:",
           "trending_today": "Тренди сьогодні",
+          "go_back": "Повернутися",
+          "additional_information":"Додаткова інформація:"
         }
       },
       en: {
@@ -35,6 +39,7 @@ i18n
           "home": "Home",
           "movies": "Movies",
           "search": "Search",
+          "search_for_movies": "Search for movies...",
           "add_to_favorites": "Add to Favorites",
           "remove_from_favorites": "Remove from Favorites",
           "submit": "Submit",
@@ -46,8 +51,12 @@ i18n
           "cast": "Cast",
           "reviews": "Reviews",
           "release_date": "Release Date",
-          "rating": "Rating",
-          "trending_today": "Trending Today"
+          "user_score": "User score:",
+          "trending_today": "Trending Today",
+          "additional_information": "Additional information:",
+          "go_back": "Go back",
+          "country": "Country:",
+           "genre": "Genre:",
         }
       }
     },

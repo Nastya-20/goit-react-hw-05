@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx'; 
+import { useTranslation } from 'react-i18next';
 import css from './Navigation.module.css';
 
 const buildLinkClass = ({ isActive }) => {
@@ -8,14 +9,15 @@ const buildLinkClass = ({ isActive }) => {
 };
 
 export default function Navigation() {
+    const { t } = useTranslation();
     return (
         <header>
         <nav className={css.nav}>
             <NavLink to="/" className={buildLinkClass}>
-                Home
+              {t('home')}
             </NavLink>
             <NavLink to="/movies" className={buildLinkClass}>
-                Movies
+                {t('movies')}
             </NavLink>
             </nav>
         </header>

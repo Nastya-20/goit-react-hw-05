@@ -32,7 +32,7 @@ export default function MovieCast() {
         return <div className={css.error}>{error}</div>; 
     }
 
-    const defaultImg = '../../../public/dog-2367414_640.jpg';
+    const defaultImg = '/src/img/dog-2367414_640.jpg';
 
     return (
         <ul className={css.castList}>
