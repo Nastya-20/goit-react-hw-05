@@ -9,7 +9,7 @@
     gap: 20px;
 }
 .poster {
-    width: 250px;
+    width: 270px;
 }
 
 .back {
@@ -19,13 +19,25 @@
 .title {
     color: #e7faf2de;
 }
+.overview {
+    font-size: 20px;
+    background: rgba(26, 68, 82, 0.938);
+    border-radius: 5px;
+    padding: 10px;
+}
 
 .details li{
   margin-bottom: 15px;
   color: #e7faf2de;
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: 0.04em;
 }
+.details strong {
+    color: #78dbfc;
+    font-size: 16px;
+    }
+
 h3 {
     margin-left: 20px;
     margin-bottom: 0;
@@ -33,7 +45,7 @@ h3 {
     letter-spacing: 0.04em;
 }
 .wrapper {
-    background-color: rgb(34, 49, 63, 0.8);
+    background-color: #11303af1;
     margin-top: 10px;
     padding: 5px 35px;
     display: flex;
@@ -42,6 +54,6 @@ h3 {
     gap: 20px;
     font-size: 20px;
     border-radius: 8px;
-    border-bottom: 1px solid #3d6856de;
-    box-shadow: 0 10px 15px #313d38de;
+    border-bottom: 1px solid #07171b;
+    box-shadow: 0 10px 15px #020c0f;
 }

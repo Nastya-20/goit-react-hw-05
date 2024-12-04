@@ -1,19 +1,21 @@
 .containerReviews {
+    background-color: #004950e5;
     list-style: none;
     margin: 0;
     margin-top: 20px;
 }
 .reviewsItem {
-    border-bottom: 1px solid #0b3d28de;
-    box-shadow: 0 4px 6px #313d38de;
+    border-bottom: 1px solid #014248;
+    box-shadow: 0 4px 6px #9eecf3;
     padding: 10px;
+    margin-bottom: 10px;
 }
 .autor {
     margin-bottom: 10px;
     margin-top: 10px;
 }
 strong {
-    color: #0b3d28de;
+    color: #51ecfa;
 }
 .noReviews {
     font-style: italic;

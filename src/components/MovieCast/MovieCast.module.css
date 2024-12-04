@@ -5,9 +5,9 @@
 }
 .castItem{
     width: 220px;
-    border: 1px solid #3d423f;
-    box-shadow: 0 10px 15px #313d38de;
-    background-color: #3f5e4b;
+    border: 1px solid #041920;
+    box-shadow: 0 10px 15px #061a20;
+    background-color: #023E43;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,7 +31,7 @@
 }
 .loader {
     font-size: 1.5rem;
-    color: #1a301a;
+    color: #023E43;
     text-align: center;
     padding: 20px;
 }

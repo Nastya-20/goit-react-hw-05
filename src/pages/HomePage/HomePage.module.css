@@ -23,7 +23,7 @@
     font-size: 1.8rem;
     color: #fff;
     margin: 20px 0;
-    border-bottom: 2px solid #ccc;
+    /*border-bottom: 2px solid #ccc;*/
     padding-bottom: 10px;
 }
 .error {

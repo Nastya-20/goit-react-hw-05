@@ -13,7 +13,7 @@
 .languageSwitcher button {
     margin-right: 10px;
     padding: 10px;
-    background-color: #5f6160;
+    background-color: #4a8588;
     color: white;
     border: none;
     border-radius: 4px;
@@ -21,5 +21,5 @@
 }
 
 .languageSwitcher button:hover {
-    background-color: #697571;
+    background-color: #84E7ED;
 }

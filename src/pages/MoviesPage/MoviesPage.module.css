@@ -2,15 +2,14 @@ form {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #809686;
+    background-color: #84E7ED;
     width:360px;
-    height: 35px;
-    border-radius: 5px;
+    height: 40px;
     padding: 2px 0 2px 10px;
     margin-bottom: 20px;
 }
 .input {
-    background-color: #809686;
+    background-color: #84E7ED;
     border: none;
     outline: none;
     flex: 1;
@@ -28,15 +27,13 @@ form {
     font-size: 14px;
     line-height: 150%;
     letter-spacing: 0.04em;
-    color: #22634d;
+    color: #77b1b4;
 }
 .btn {
-    border-radius: 5px;
-    border: 1px solid #809686;
     padding: 6px 16px;
     width: 100px;
     height: 40px;
-    background-color: #41554dde;
+    background-color: #4a8588;
     border: none;
     font-weight: 500;
     font-size: 18px;
@@ -46,7 +43,7 @@ form {
 }
 .btn:hover,
 .btn:focus {
-background-color: #30443cde;
+background-color: #3ad2da;
 }
 .loader {
     margin-top: 20px;

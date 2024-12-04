@@ -1,13 +1,13 @@
 .nav {
-    background-color: rgb(34, 49, 63, 0.8);
+    /*background-color: rgb(34, 49, 63, 0.8);*/
     display: flex;
     gap: 30px;
     font-size: 20px;
     padding: 10px 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    border-bottom: 1px solid #3d6856de;
-    box-shadow: 0 10px 15px #313d38de;
+    /*border-bottom: 1px solid #3d6856de;
+    box-shadow: 0 10px 15px #313d38de;*/
 }
 
 nav a {
@@ -20,11 +20,11 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(12, 6, 6, 0.075);
 }
 
 nav a.active {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(17, 11, 11, 0.3);
 }
 
 .link {
